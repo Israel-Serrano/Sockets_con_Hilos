@@ -8,7 +8,8 @@ import java.net.Socket;
 import java.util.ArrayList;
 
 /*Clase Hilos en la cual creamos un hilo por cada socket creado.
-  Para la utilización de esta clase, hemos decidido que implemente la interfaz Runnable*/
+  Para la utilización de esta clase, he decidido que implemente la interfaz Runnable
+  en vez de heredar de Thread*/
 
 public class Hilos implements Runnable {
 	
@@ -41,7 +42,7 @@ public class Hilos implements Runnable {
 		
 		try {
 			
-			/*Cremamos un nuevo stream de entrada y salida, además de un objeto (BufferedReader)
+			/*Creamos un nuevo stream de entrada y salida, además de un objeto (BufferedReader)
 			  para ayudar con la lectura de entrada.*/
 			entrada = new InputStreamReader(socketCliente.getInputStream());
 			salida = new PrintStream(socketCliente.getOutputStream());
