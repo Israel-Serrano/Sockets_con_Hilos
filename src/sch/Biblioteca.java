@@ -39,7 +39,7 @@ public class Biblioteca {
 			e1.printStackTrace();
 		}
 		
-		//Añadimos los libros al array cread anteriormente.
+		//Añadimos los libros al array creado anteriormente.
 		libros.add(new Libro("9780765311771", "Elantris", "Brandon Sanderson", "26.50"));
 		libros.add(new Libro("9788468402772", "Los muertos vivientes", "Robert Kirkman", "20"));
 		libros.add(new Libro("9788417347291", "El imperio final", "Brandon Sanderson", "19.86"));
@@ -49,7 +49,7 @@ public class Biblioteca {
 		System.out.println("Biblioteca cargada");
 		
 		/*Utilizamos un try-with-resources con ServerSocket, 
-		  para poder cerrarlo automáticamente cuando terminemos de usar dicho bloque.*/
+		  para que se cierre automáticamente cuando terminemos de usar dicho bloque.*/
 		try(ServerSocket servidor = new ServerSocket()){
 			
 			//Ponemos a la escucha al ServerSocket en la dirección anteriormente creada.
@@ -64,13 +64,13 @@ public class Biblioteca {
 				//Creación del Socket
 				Socket socketCliente = servidor.accept();
 				System.out.println("\nPetición nº " + ++peticion + " recibida" + "\n" );
+				
 				//Creación del Hilo asociado al Socket
 				new Hilos(socketCliente);
 				
 			}
 		
-		/*Varias excepciones a tratar*/	
-		
+		//Varias excepciones a tratar
 		}catch(IOException e) {
 			
 			System.err.println("Error entrada/salida");

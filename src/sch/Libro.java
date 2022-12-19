@@ -10,7 +10,7 @@ public class Libro {
 	private String autor;
 	private String precio;
 	
-	//Constructor con y sin parámetros (respectivamente)	
+	//Constructor con parámetros
 	public Libro(String isbn, String titulo, String autor, String precio) {		
 		super();
 		this.isbn = isbn;
@@ -19,12 +19,12 @@ public class Libro {
 		this.precio = precio;	
 	}
 	
+	//Constructor sin parámetros
 	public Libro() {
 		super();
 	}
 	
-	/*Métodos getter and setter*/
-	
+	//Métodos getter and setter
 	public String getIsbn() {
 		return isbn;
 	}
